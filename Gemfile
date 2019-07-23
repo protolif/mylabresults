@@ -9,6 +9,10 @@ gem 'rails', '~> 5.2.3'
 gem 'pg', '1.1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+# Use Haml template engine over ERB
+gem 'haml'
+# Replace ERB generators with Haml ones
+gem 'haml-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
