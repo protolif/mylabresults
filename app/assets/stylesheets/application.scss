@@ -1,0 +1,115 @@
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/* Pre-loading the icon font to minimize perceived latency */
+#preloader {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Custom Colors */
+$danger_color:   #d9534f;
+$danger_hover:   #c9302c;
+$warning_color:  #f0ad4e;
+$warning_hover:  #ec971f;
+$secret_passage: #c0c0cf;
+$midnight_ink:   #03030f;
+$container_background: $secret_passage;
+$container_font_color: $midnight_ink;
+$navbar_background: $midnight_ink;
+
+/* Top navigation bar */
+#navbar {
+  @extend .navbar, .navbar-expand-md, .navbar-dark, .bg-dark;
+  background-color: $navbar_background !important;
+  padding: 2px;
+  .logo {
+    @extend .navbar-brand;
+    padding: 0;
+    margin: 0 16px 3px 5px;
+  }
+  #collapsible {
+    @extend .collapse, .navbar-collapse;
+    ul.links {
+      @extend .navbar-nav, .mr-auto;
+      li {
+        @extend .nav-item;
+        line-height: 1.25;
+        a { @extend .nav-link; }
+      }
+    }
+    #inline_login {
+      @extend .form-inline, .my-2, .my-md-0;
+      input[type="text"], input[type="password"] {
+        @extend .form-control;
+        padding: 0 5px 0 5px;
+        max-height: 2em;
+        margin: 0 5px 0 0;
+      }
+      button {
+        @extend .btn, .btn-outline-primary;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+/* Integrating Rails' flash_message with Bootstrap alerts */
+.alert {
+  position: fixed;
+  z-index: 9000;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+  .close { margin-left: 5px; }
+}
+.alert.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.alert.fade.in {
+  opacity: 1;
+}
+/* End flash messages */
+
+/* Mobile-friendly grid system */
+#container {
+  @extend .container-fluid;
+  color: $container_font_color;
+  background-color: $container_background;
+  padding: 9px 15px 0 15px;
+}
+
+/* Hide elements (for real) */
+.hidden {
+  $visible: false;
+  @extend .invisible;// Bootstrap's .invisible
+  display: none;// nullify geometry to reclaim space
+}
+
+/* Animated loading spinner widget */
+#loading {
+  @extend .text-center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9001;
+  padding-top: 25%;
+  font-size: 5em;
+  background-color: rgba(0, 0, 0, 0.7);
+  .fa-spinner { color: white; }
+  &.inactive { display: none; }
+}
+
+/* Footer */
+.footer {
+  @extend .col-sm-12, .mx-auto;
+  a:hover { text-decoration: none; }
+}

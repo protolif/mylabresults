@@ -1,0 +1,12 @@
+%nav#navbar
+  = link_to root_path, class: 'logo' do
+    My Lab Results
+  #collapsible
+    %ul.links
+      %li= link_to "Order Tests", root_path
+      %li= link_to "Research", root_path
+      %li= link_to "Support", root_path
+    %form#inline_login
+      %input{ placeholder: 'Username', type: 'text', size: 10 }
+      %input{ placeholder: 'Password', type: 'password', size: 13 }
+      = button_tag 'Login'
