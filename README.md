@@ -2,6 +2,8 @@
 
 This is a mock-up of a medical lab results online portal built with Ruby on Rails, JavaScript, Bootstrap, and Sorcery. It features a unique security model based on HIPAA and NIST guidelines for account management, and a mobile-friendly user interface.
 
+Demo: https://mylabresults.herokuapp.com/
+
 Technical Info:
 
 * Ruby version: 2.6.1

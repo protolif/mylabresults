@@ -5,6 +5,8 @@
   #collapsible
     %ul.links
       %li= link_to "Order Tests", construction_path
+      - if current_user
+        %li= link_to "Get Results", current_user, class: 'text-primary'
       %li= link_to "Research", construction_path
       %li= link_to "Support", construction_path
     - unless current_user

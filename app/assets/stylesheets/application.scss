@@ -16,10 +16,12 @@ $warning_color:  #f0ad4e;
 $warning_hover:  #ec971f;
 $secret_passage: #c0c0cf;
 $overcast_skies: #ebebf0;
+$tesla_coil: #47a0ff;
 $midnight_ink:   #03030f;
 $container_background: $overcast_skies;
 $container_font_color: $midnight_ink;
 $navbar_background: $midnight_ink;
+$navbar_attention: $tesla_coil;
 
 /* Top navigation bar */
 #navbar {
@@ -39,6 +41,7 @@ $navbar_background: $midnight_ink;
         @extend .nav-item;
         line-height: 1.25;
         a { @extend .nav-link; }
+        .text-primary:hover { color: $navbar_attention !important; }
       }
     }
     #inline_login {
