@@ -15,8 +15,9 @@ $danger_hover:   #c9302c;
 $warning_color:  #f0ad4e;
 $warning_hover:  #ec971f;
 $secret_passage: #c0c0cf;
+$overcast_skies: #ebebf0;
 $midnight_ink:   #03030f;
-$container_background: $secret_passage;
+$container_background: $overcast_skies;
 $container_font_color: $midnight_ink;
 $navbar_background: $midnight_ink;
 
@@ -48,7 +49,7 @@ $navbar_background: $midnight_ink;
         max-height: 2em;
         margin: 0 5px 0 0;
       }
-      button {
+      input[type="submit"] {
         @extend .btn, .btn-outline-primary;
         line-height: 1;
       }
@@ -84,6 +85,8 @@ $navbar_background: $midnight_ink;
   background-color: $container_background;
   padding: 9px 15px 0 15px;
 }
+/* Set background to match container in case it's too short */
+body { background-color: $container_background; }
 
 /* Hide elements (for real) */
 .hidden {

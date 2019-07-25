@@ -6,7 +6,11 @@
       %li= link_to "Order Tests", root_path
       %li= link_to "Research", root_path
       %li= link_to "Support", root_path
-    %form#inline_login
-      %input{ placeholder: 'Username', type: 'text', size: 10 }
-      %input{ placeholder: 'Password', type: 'password', size: 13 }
-      = button_tag 'Login'
+    - unless current_user
+      = form_tag login_path, { method: :post, id: "inline_login" } do
+        = text_field_tag :username, nil, { placeholder: 'Username', size: 10 }
+        = password_field_tag :password, nil, { placeholder: 'Password', size: 13 }
+        = submit_tag 'Login'
+    - else
+      = form_tag logout_path, { method: :get, id: "inline_login" } do
+        = submit_tag 'Log Out'

@@ -28,7 +28,8 @@ class PatientsController < ApplicationController
 
     respond_to do |format|
       if @patient.save
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+        auto_login @patient
+        format.html { redirect_to @patient, notice: "Registration successful." }
         format.json { render :show, status: :created, location: @patient }
       else
         format.html { render :new }
