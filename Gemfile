@@ -38,6 +38,7 @@ gem 'font-awesome-sass'
 gem 'uglifier', '>= 1.3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'sorcery', '~> 0.14.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
