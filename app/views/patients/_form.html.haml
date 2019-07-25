@@ -1,0 +1,23 @@
+= form_for @patient do |f|
+  .form-group
+    - if @patient.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@patient.errors.count, "error")} prohibited this patient from being saved:"
+        %ul
+          - @patient.errors.full_messages.each do |message|
+            %li= message
+    .form-row
+      .form-group.col-md-3
+        = f.label :username
+        = f.text_field :username, class: 'form-control'
+    .form-row
+      .form-group.col-md-3
+        = f.label :password
+        = f.password_field :password, class: 'form-control'
+    .form-row
+      .form-group.col-md-3
+        = f.submit 'Submit', class: 'btn btn-primary'
+        &nbsp;
+        = link_to patients_path, class: 'btn btn-secondary' do
+          %i.far.fa-hand-point-left
+          Back

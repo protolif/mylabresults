@@ -1,0 +1,54 @@
+%p
+  Results for patient
+  %b= @patient.username
+  on
+  = succeed ':' do
+    = Date.today
+
+%table.table.table-striped
+  %thead.thead-dark
+    %tr
+      %th{:scope => "col"} Test
+      %th{:scope => "col"} Result
+      %th{:scope => "col"} Standard Range
+      %th{:scope => "col"} Unit
+  %tbody
+    %tr
+      %th{:scope => "row"} WBC COUNT
+      %td= rand(3.5..12.5).round(2)
+      %td 3.5 - 12.5
+      %td K/uL
+    %tr
+      %th{:scope => "row"} RED BLOOD CELLS COUNT
+      %td= rand(4.1..5.7).round(2)
+      %td 4.10 - 5.70
+      %td M/uL
+    %tr
+      %th{:scope => "row"} HGB
+      %td= rand(13.0..17.0).round(2)
+      %td 13.0 - 17.0
+      %td g/dL
+    %tr
+      %th{:scope => "row"} HEMATOCRIT
+      %td= rand(39.0..51.0).round(2)
+      %td 39.0 - 51.0
+      %td %
+    %tr
+      %th{:scope => "row"} MCV
+      %td= rand(80..100)
+      %td 80 - 100
+      %td fL
+    %tr
+      %th{:scope => "row"} RDW, RBC
+      %td= rand(11.9..14.3).round(2)
+      %td 11.9 - 14.3
+      %td %
+    %tr
+      %th{:scope => "row"} PLATELETS COUNT
+      %td= rand(140..400)
+      %td 140 - 400
+      %td K/uL
+
+= link_to root_path, class: 'btn btn-secondary' do
+  %i.far.fa-hand-point-left
+  Back
