@@ -1,7 +1,12 @@
-%h1 Hello World!
-%p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+%h1 Welcome!
+%p At MyLabResults, we provide simple medical testing services to the public, with convenient access to your results via our online portal. Log in or register now to get started!
 - unless current_user
-  .cta= link_to "New Patient", new_patient_path, class: 'btn btn-primary'
+  .cta
+    = link_to new_patient_path, class: 'btn btn-primary' do
+      %i.fa.fa-user-plus
+      New Patient
+%br
+%br
 %br
 %br
 %br

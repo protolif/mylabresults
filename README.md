@@ -1,24 +1,19 @@
-# README
+# MyLabResults
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a mock-up of a medical lab results online portal built with Ruby on Rails, JavaScript, Bootstrap, and Sorcery. It features a unique security model based on HIPAA and NIST guidelines for account management, and a mobile-friendly user interface.
 
-Things you may want to cover:
+Technical Info:
 
-* Ruby version
+* Ruby version: 2.6.1
 
-* System dependencies
+* System dependencies: N/A (but *NIX is recommended)
 
-* Configuration
+* Configuration: bundle install
 
-* Database creation
+* Database creation: rails db:migrate
 
-* Database initialization
+* How to run the test suite: rspec spec
 
-* How to run the test suite
+* Deployment instructions: git push heroku master
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+fin

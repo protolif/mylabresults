@@ -3,7 +3,7 @@
   %b= @patient.username
   on
   = succeed ':' do
-    = Date.today
+    = Date.today.strftime('%A, %B %e, %Y')
 
 %table.table.table-striped
   %thead.thead-dark
@@ -50,5 +50,5 @@
       %td K/uL
 
 = link_to root_path, class: 'btn btn-secondary' do
-  %i.far.fa-hand-point-left
+  %i.fa.fa-arrow-left
   Back

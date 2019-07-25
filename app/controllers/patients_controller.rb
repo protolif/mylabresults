@@ -4,7 +4,7 @@ class PatientsController < ApplicationController
   # GET /patients
   # GET /patients.json
   def index
-    @patients = Patient.all
+    redirect_to root_path, notice: "Not authorized!"
   end
 
   # GET /patients/1

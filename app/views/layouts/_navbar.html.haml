@@ -1,11 +1,12 @@
 %nav#navbar
   = link_to root_path, class: 'logo' do
+    %i.fa.fa-chart-bar
     My Lab Results
   #collapsible
     %ul.links
-      %li= link_to "Order Tests", root_path
-      %li= link_to "Research", root_path
-      %li= link_to "Support", root_path
+      %li= link_to "Order Tests", construction_path
+      %li= link_to "Research", construction_path
+      %li= link_to "Support", construction_path
     - unless current_user
       = form_tag login_path, { method: :post, id: "inline_login" } do
         = text_field_tag :username, nil, { placeholder: 'Username', size: 10 }
